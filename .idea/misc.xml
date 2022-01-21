@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/drawable-v24/bg_login_button.xml" value="0.39114583333333336" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout-sw600dp/dummy_layout.xml" value="0.33" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_add_beneficiary.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_customer_creation.xml" value="0.22" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_home.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_image.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_jlg_loan_creation.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_jlg_pending_list.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_loan_receipt.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_mini_statement_reciept.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_receipt.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_search.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_search_center.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_search_group.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_search_group_account.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_search_loan_number.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_search_member.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_split_closing.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/activity_split_transaction.xml" value="0.33" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/agent_management_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/app_bar_main.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/balance_enquiry_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/bc_report_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/cash__transfer_fragment.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/change_password_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/closing_general_details_fragment.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/closing_other_details_fragment.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/closing_remittance_details_fragment.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/content_main.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/customer_creation_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/daily_report_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/date_to_date_report_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/dummy_home.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/dummy_layout.xml" value="0.25" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_cash_deposit.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_cash_withdrawal.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_enquiry.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_gallery.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_home.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_mini_statement.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_slideshow.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_support.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/fragment_transactions.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/general_details_fragment.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/item_layout_search_loan.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/item_search_layout.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/jlg_center_creation_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/jlg_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/jlg_group_creation_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/jlg_loan_details_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/jlg_loan_general_details_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/jlg_loan_select_group_fragment.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_collection_confirmation.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_error_layout.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_item_charges.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_item_jlg_center.xml" value="0.23703703703703705" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_item_mini_statement.xml" value="0.2351851851851852" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_item_mini_statement_pofile.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_item_remitance_details.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_item_search_group.xml" value="0.2351851851851852" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_loan_collection_confirmation.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_progress_dialog.xml" value="0.2351851851851852" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_remittance.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_row_closing_group.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_row_group.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_row_loan.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_row_member.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_row_pending_list.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_row_search_center.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_row_search_group.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/layout_row_search_member.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/loan_collection_fragment.xml" value="0.36923076923076925" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/nav_header_main.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/neft_fragment.xml" value="0.21354166666666666" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/other_details_fragment.xml" value="0.33" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/remittance_details_fragment.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/row_layout_charges.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/layout/select_pic_view.xml" value="0.375" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.39114583333333336" />
+        <entry key="..\:/leslin/leslin git/Doorstep gramadhanasree/Doorstep gramadhanasree/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.39114583333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

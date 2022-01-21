@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.finwin.doorstep.gramadhanasree.home.customer_creation.CustomerCreationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.customer_creation.CustomerCreationActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout32"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView163"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="customer creation"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout32">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout36"
+                        android:visibility="visible"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_white"
+                        android:elevation="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView164"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/nunito_regular"
+                            android:paddingRight="2dp"
+                            android:text="Personal Details"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView165"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Branch"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView164" />
+
+                        <TextView
+
+                            android:id="@+id/textView166"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_outlined"
+                            android:elevation="3dp"
+                            android:fontFamily="@font/nunito_regular"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="@{viewmodel.branchId}"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView165" />
+
+                        <Spinner
+                            android:focusableInTouchMode="true"
+                            android:focusable="true"
+                            android:id="@+id/spinner_branch"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/bg_spinner"
+                            android:elevation="5dp"
+                            android:entries="@{viewmodel.branchList}"
+                            android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedBranch(parent,view,position,id)}"
+                            android:selectedItemPosition="@={viewmodel.selectedBranch}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView166"
+                            app:layout_constraintTop_toBottomOf="@+id/textView165" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout33"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView166">
+
+                            <TextView
+                                android:id="@+id/textView168"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="@string/name"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Spinner
+                                android:focusableInTouchMode="true"
+                                android:focusable="true"
+                                android:id="@+id/spinner_prefix"
+                                android:layout_width="100dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/bg_outlined"
+                                android:elevation="5dp"
+                                android:entries="@{viewmodel.prefixList}"
+                                android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedPrefix(parent,view,position,id)}"
+                                android:selectedItemPosition="@={viewmodel.selectedPrefix}"
+                                android:spinnerMode="dialog"
+                                app:layout_constraintBottom_toBottomOf="@+id/et_name"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/et_name" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/et_name"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:inputType="textFilter|textNoSuggestions|textVisiblePassword"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="4dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/spinner_prefix"
+                                app:layout_constraintTop_toBottomOf="@+id/textView168">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:importantForAutofill="no"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@={viewmodel.etName}"
+                                    android:inputType="textFilter|textNoSuggestions|textVisiblePassword"
+                                    android:singleLine="true"
+                                    android:imeOptions="actionNext"
+                                    android:hint="@string/name" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <ImageView
+                                android:id="@+id/imageView35"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                app:layout_constraintStart_toEndOf="@+id/textView168"
+                                app:layout_constraintTop_toTopOf="@+id/textView168"
+                                app:srcCompat="@drawable/ic_star" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout34"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout33">
+
+                            <TextView
+                                android:id="@+id/textView169"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="@string/dob"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+
+                                android:id="@+id/btn_dob"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::onClickDob}"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="@{viewmodel.dob}"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/textView170"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView169" />
+
+                            <TextView
+
+                                android:id="@+id/textView170"
+                                android:layout_width="60dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/bg_outlined"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:text="@{viewmodel.et_age}"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/btn_dob"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/btn_dob" />
+
+                            <ImageView
+                                android:id="@+id/imageView36"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                app:layout_constraintStart_toEndOf="@+id/textView169"
+                                app:layout_constraintTop_toTopOf="@+id/textView169"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <TextView
+                                android:id="@+id/textView167"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                android:text="Age"
+                                app:layout_constraintStart_toStartOf="@+id/textView170"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout35"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout34">
+
+                            <TextView
+                                android:id="@+id/textView171"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="gender"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Spinner
+                                android:focusableInTouchMode="true"
+                                android:focusable="true"
+                                android:id="@+id/spinner_gender"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_spinner"
+                                android:entries="@{viewmodel.genderList}"
+                                android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedGender(parent,view,position,id)}"
+                                android:selectedItemPosition="@={viewmodel.selectedGender}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView171" />
+
+                            <ImageView
+                                android:id="@+id/imageView37"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                app:layout_constraintStart_toEndOf="@+id/textView171"
+                                app:layout_constraintTop_toTopOf="@+id/textView171"
+                                app:srcCompat="@drawable/ic_star" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout35">
+
+                            <TextView
+                                android:id="@+id/textView172"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="Id Proof 1"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Spinner
+                                android:id="@+id/spinner_id_proof"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_spinner"
+                                android:entries="@{viewmodel.idProofList}"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedIdProofOne(parent,view,position,id)}"
+                                android:selectedItemPosition="@={viewmodel.selectedIdProofOne}"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView172" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/et_id_proof_number"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/spinner_id_proof">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/id_proof_number"
+                                    android:importantForAutofill="no"
+                                    android:text="@={viewmodel.idProofNumberOne}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textView173"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="Valid from"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/et_id_proof_number" />
+
+                            <View
+                                android:id="@+id/view13"
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/et_id_proof_number" />
+
+                            <TextView
+                                android:id="@+id/btn_from"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::onClickFromDateOne}"
+                                android:text="@{viewmodel.fromDateOne}"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_color_black"
+                                app:layout_constraintEnd_toStartOf="@+id/view13"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView173" />
+
+                            <TextView
+                                android:id="@+id/btn_to"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::onClickToDateOne}"
+                                android:text="@{viewmodel.toDateOne}"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_color_black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@+id/view13"
+                                app:layout_constraintTop_toBottomOf="@+id/textView174" />
+
+                            <TextView
+                                android:id="@+id/textView174"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="to"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toEndOf="@+id/view13"
+                                app:layout_constraintTop_toBottomOf="@+id/et_id_proof_number" />
+
+                            <ImageView
+                                android:id="@+id/imageView38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                app:layout_constraintStart_toEndOf="@+id/textView172"
+                                app:layout_constraintTop_toTopOf="@+id/textView172"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <TextView
+                                android:id="@+id/textView183"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:text="Id Proof 2"
+                                android:fontFamily="@font/nunito_regular"
+
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/btn_from" />
+
+                            <Spinner
+                                android:background="@drawable/bg_spinner"
+                                android:entries="@{viewmodel.idProofList}"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedIdProofTwo(parent,view,position,id)}"
+                                android:selectedItemPosition="@={viewmodel.selectedIdProofTwo}"
+                                android:id="@+id/spinner8"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView183" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:id="@+id/textInputLayout7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/spinner8">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/id_proof_number"
+                                    android:importantForAutofill="no"
+                                    android:text="@={viewmodel.idProofNumberTwo}"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textView184"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="Valid from"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+                            <View
+                                android:id="@+id/view16"
+                                android:layout_width="1dp"
+                                android:layout_height="50dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+                            <TextView
+                                android:id="@+id/textView185"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="to"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toEndOf="@+id/view16"
+                                app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+
+                            <TextView
+                                android:id="@+id/button19"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::onClickFromDateTwo}"
+                                android:text="@{viewmodel.fromDateTwo}"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_color_black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/view16"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView184" />
+
+                            <TextView
+                                android:id="@+id/button21"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::onClickToDateTwo}"
+                                android:text="@{viewmodel.toDateTwo}"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_color_black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@+id/view16"
+                                app:layout_constraintTop_toBottomOf="@+id/textView185" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/imageView34"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            app:layout_constraintStart_toEndOf="@+id/textView165"
+                            app:layout_constraintTop_toTopOf="@+id/textView165"
+                            app:srcCompat="@drawable/ic_star" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout38"
+                        android:layout_width="0dp"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_white"
+                        android:elevation="3dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout36">
+
+                        <TextView
+                            android:id="@+id/textView175"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/nunito_regular"
+                            android:paddingRight="2dp"
+                            android:text="Address"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView177"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Address Type"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView175" />
+
+                        <Spinner
+                            android:focusableInTouchMode="true"
+                            android:focusable="true"
+                            android:id="@+id/spinner_address_type"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/bg_spinner"
+                            android:entries="@{viewmodel.addressTypeList}"
+                            android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedAddressType(parent,view,position,id)}"
+                            android:selectedItemPosition="@={viewmodel.selectedAddressType}"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView177" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/et_address"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/spinner_address_type">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:importantForAutofill="no"
+                                android:text="@={viewmodel.address}"
+                                android:hint="Address" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout37"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/et_address">
+
+                            <TextView
+                                android:id="@+id/textView178"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="Location"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Spinner
+                                android:focusableInTouchMode="true"
+                                android:focusable="true"
+                                android:id="@+id/spinner_location"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_spinner"
+                                android:entries="@{viewmodel.locationList}"
+                                android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedLocation(parent,view,position,id)}"
+                                android:selectedItemPosition="@={viewmodel.selectedLocation}"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView178" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/et_pincode"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/spinner_location">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:imeOptions="actionDone"
+                                    android:hint="Pincode"
+                                    android:maxLines="1"
+                                    android:text="@={viewmodel.etPincode}"
+                                    android:singleLine="true"
+                                    android:maxLength="6"
+                                    android:onTextChanged="@{(text, start, before, count) -> viewmodel.onTextChanged(text)}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <ImageView
+                                android:id="@+id/imageView40"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                app:layout_constraintStart_toEndOf="@+id/textView178"
+                                app:layout_constraintTop_toTopOf="@+id/textView178"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <Spinner
+                                android:id="@+id/spinner_post_office"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_spinner"
+                                android:entries="@{viewmodel.postOfficeList}"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedPostOffice(parent,view,position,id)}"
+                                android:selectedItemPosition="@={viewmodel.selectedPostOffice}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/et_pincode">
+
+                            </Spinner>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout37">
+
+                            <TextView
+                                android:id="@+id/textView179"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:text="@string/Phone"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textInputLayout9" />
+
+                            <Spinner
+                                android:id="@+id/spinner_phone_type"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_spinner"
+                                android:entries="@{viewmodel.phoneTypeList}"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:onItemSelected="@{(parent,view,position,id)->viewmodel.onSelectedPhoneType(parent,view,position,id)}"
+                                android:selectedItemPosition="@={viewmodel.selectedPhoneType}"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView179" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/et_phone_number"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="55dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintEnd_toStartOf="@+id/img_verified"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/spinner_phone_type">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/Phone"
+                                    android:importantForAutofill="no"
+                                    android:inputType="phone"
+                                    android:maxLength="10"
+                                    android:onTextChanged="@{(text, start, before, count) -> viewmodel.onPhoneChanged(text)}"
+                                    android:singleLine="true"
+                                    android:text="@={viewmodel.etPhone}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/et_house_name"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="7dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/et_phone_number">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="House Name"
+                                    android:importantForAutofill="no"
+                                    android:text="@={viewmodel.etHouseName}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <ImageView
+                                android:id="@+id/imageView41"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                app:layout_constraintStart_toEndOf="@+id/textView179"
+                                app:layout_constraintTop_toTopOf="@+id/textView179"
+                                app:srcCompat="@drawable/ic_star" />
+
+                            <Button
+
+                                android:id="@+id/tv_verifyOtp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_login_button"
+                                android:backgroundTint="@null"
+                                android:fontFamily="@font/nunito_regular"
+                                android:onClick="@{viewmodel::clickSentOtp}"
+                                android:text="Verify"
+                                android:textColor="@color/white"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/spinner_phone_type" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/layout_otp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/bg_white"
+                                android:elevation="2dp"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/et_phone_number">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout8"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="55dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="16dp"
+                                    app:layout_constraintEnd_toStartOf="@+id/button22"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Enter OTP"
+                                        android:inputType="number"
+                                        android:text="@={viewmodel.otp}" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <Button
+                                    android:id="@+id/button22"
+
+                                    android:layout_width="wrap_content"
+
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:background="@drawable/bg_login_button"
+                                    android:backgroundTint="@null"
+                                    android:fontFamily="@font/nunito_regular"
+                                    android:onClick="@{viewmodel::submitOtp}"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:text="Submit OTP"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView187"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="@font/nunito_regular"
+                                    android:onClick="@{viewmodel::clickResentOtp}"
+                                    android:padding="10dp"
+                                    android:text="Resend OTP"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="16sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <ImageView
+                                android:id="@+id/img_verified"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/et_phone_number"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_verifyOtp"
+                                app:layout_constraintTop_toTopOf="@+id/et_phone_number"
+                                app:layout_constraintVertical_bias="0.514"
+                                app:srcCompat="@drawable/ic_not_verified" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/textInputLayout9"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="E-mail ID"
+                                    android:importantForAutofill="no"
+                                    android:inputType="textEmailAddress"
+                                    android:text="@={viewmodel.etEmailId}" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/imageView39"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            app:layout_constraintStart_toEndOf="@+id/textView177"
+                            app:layout_constraintTop_toTopOf="@+id/textView177"
+                            app:srcCompat="@drawable/ic_star" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout42"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_white"
+                        android:elevation="4dp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout38">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout39"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView181">
+
+                            <ImageView
+                                android:id="@+id/img_profile_photo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/btn_profile_photo" />
+
+                            <TextView
+                                android:id="@+id/btn_profile_photo"
+                                android:layout_width="0dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::clickProfilePhoto}"
+                                android:text="Select Profile Photo"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_color_black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/textView181"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="Upload Photos"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout40"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout39">
+
+                            <TextView
+                                android:id="@+id/btn_signature"
+                                android:layout_width="0dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::clickSignature}"
+                                android:text="Signature"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_color_black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_signature"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.502"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/btn_signature" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout41"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout40">
+
+                            <TextView
+                                android:id="@+id/btn_id_proof_side_one"
+                                android:layout_width="0dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::clickIdproofSideOne}"
+                                android:text="ID Proof-1"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_color_black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_id_proof_side_one"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/btn_id_proof_side_one" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout41">
+
+                            <TextView
+                                android:id="@+id/btn_id_proof_two"
+                                android:layout_width="0dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_outlined"
+                                android:backgroundTint="@null"
+                                android:elevation="3dp"
+                                android:fontFamily="@font/nunito_regular"
+                                android:gravity="center"
+                                android:onClick="@{viewmodel::clickIdproofSideTwo}"
+                                android:text="ID Proof -2"
+                                android:textAllCaps="false"
+                                android:textColor="@color/text_color_black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+
+                                android:id="@+id/img_id_proof_side_two"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/btn_id_proof_two" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Button
+                        android:id="@+id/button29"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:onClick="@{viewmodel::clickSubmit}"
+                        android:text="Submit"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout42" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

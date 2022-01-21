@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#27436F</color>
+    <color name="colorPrimaryDark">#27436F</color>
+    <color name="colorAccent">#27436F</color>
+    <color name="neavy_blue">#27436F</color>
+    <color name="white">#fff</color>
+    <color name="text_color_white">#fff</color>
+    <color name="text_color_black">#000</color>
+    <color name="black">#000</color>
+    <color name="editTextBackground">#727373</color>
+    <color name="light_grey">#888484</color>
+    <color name="grey">#706B6B</color>
+    <color name="red">#BF1313</color>
+    <color name="green">#31DD1E</color>
+    <color name="textColorBlack">#000</color>
+    <color name="textColorBlue">#27436F</color>
+</resources>

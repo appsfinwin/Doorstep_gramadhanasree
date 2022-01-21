@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.finwin.doorstep.gramadhanasree">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.finwin.doorstep.gramadhanasree.logout_listner.MemberApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:icon">
+
+        <activity android:name=".print_reciept.loan_recipt.LoanReceiptActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material"
+            tools:ignore="Instantiatable"></activity>
+
+        <activity android:name=".home.jlg.search_account_group.SearchGroupAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material"></activity>
+        <activity
+            android:name=".home.jlg.jlg_pending_lists.JlgPendingListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name=".home.jlg.jlg_split_closing.SplitClosingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name=".home.jlg.search_group.SearchGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name=".home.jlg.jlg_loan_creation.JlgLoanCreationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name=".home.jlg.search_center.SearchCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material"/>
+        <activity
+            android:name=".home.jlg.search_member.SearchMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name=".home.transactions.loan_collection.search_loan_number.SearchLoanNumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name="com.finwin.doorstep.gramadhanasree.home.customer_creation.select_image.ImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent.ImagePicker" />
+        <activity
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:name="com.finwin.doorstep.gramadhanasree.home.customer_creation.CustomerCreationActivity"
+            android:theme="@style/AppTheme_Material"/>
+        <activity
+            android:name="com.finwin.doorstep.gramadhanasree.home.jlg.split_transaction.SplitTransactionActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+
+        <activity
+            android:name="com.finwin.doorstep.gramadhanasree.home.enquiry.mini_statement.reciept.MiniStatementRecieptActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name="com.finwin.doorstep.gramadhanasree.print_reciept.ReceiptActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name="com.finwin.doorstep.gramadhanasree.home.transactions.search_account.SearchActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name="com.finwin.doorstep.gramadhanasree.home.home_activity.HomeActivity"
+            android:fitsSystemWindows="true"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material" />
+        <activity
+            android:name="com.finwin.doorstep.gramadhanasree.MainActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.finwin.doorstep.gramadhanasree.login.LoginActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Material">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
