@@ -156,10 +156,13 @@ class JlgLoanDetailsFragment : Fragment() {
                     }
 
                     JlgLoanCreationAction.CREATE_JLG_LOAN_SUCCESS->{
-                        SweetAlertDialog(activity, SweetAlertDialog.SUCCESS_TYPE)
-                            .setTitleText("SUCCESS!")
-                            .setContentText("AccountNumber ="+ it.createJlGLoanResponse!!.AccountNo)
-                            .setConfirmClickListener {
+
+                        var dialog=   SweetAlertDialog(activity, SweetAlertDialog.SUCCESS_TYPE)
+
+                        dialog.setTitleText("SUCCESS!")
+                        dialog.setContentText("AccountNumber ="+ it.createJlGLoanResponse!!.AccountNo)
+                        dialog.setCancelable(false)
+                        dialog.setConfirmClickListener {
                                 it.cancel()
                                 viewModel.clearData()
                                 (activity as JlgLoanCreationActivity?)?.setTab(0)
@@ -167,7 +170,7 @@ class JlgLoanDetailsFragment : Fragment() {
                                     JlgLoanCreationAction.JLG_CLEAR_DATA)
                             }
                             //.setContentText(it.createJlGLoanResponse?.msg)
-                            .show()
+                        dialog.show()
                     }
                 }
             })

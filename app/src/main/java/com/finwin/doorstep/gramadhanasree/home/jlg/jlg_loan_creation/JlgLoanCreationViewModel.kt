@@ -216,7 +216,8 @@ class JlgLoanCreationViewModel(application: Application) : AndroidViewModel(appl
         )
 
         var request = JSONObject(jsonParams).toString()
-        JlgLoanCreationRepository.createJlgLoan(apiInterface, body)
+         request = JSONObject(jsonParams).toString()
+       // JlgLoanCreationRepository.createJlgLoan(apiInterface, body)
 
     }
 

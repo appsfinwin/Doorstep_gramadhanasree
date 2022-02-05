@@ -143,7 +143,6 @@ interface ApiInterface {
     @POST("JLGSelectProduct")
     fun getJlgProducts(@Body body: RequestBody?): Single<GetJlgProductResponse?>?
 
-
     @POST("LoanMaster")
     fun createJlgLoan(@Body body: RequestBody?): Single<CreateJlGLoanResponse?>?
 

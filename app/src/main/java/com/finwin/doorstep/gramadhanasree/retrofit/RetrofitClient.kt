@@ -65,8 +65,8 @@ class RetrofitClient {
                 .build()
 
             apiInterface = Retrofit.Builder()
-                //.baseUrl("http://192.168.0.221:169/")//local
-                .baseUrl("http://doorsteplocal.digicob.in/")
+                .baseUrl("http://192.168.0.221:169/")//local
+                //.baseUrl("http://doorsteplocal.digicob.in/")
                 //.baseUrl("http://doorstep.gdbf.digicob.in/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())

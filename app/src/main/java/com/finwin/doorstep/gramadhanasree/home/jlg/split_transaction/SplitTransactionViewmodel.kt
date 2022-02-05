@@ -186,6 +186,7 @@ class SplitTransactionViewmodel(application: Application) : AndroidViewModel(app
                     obj = JSONObject()
                     obj.put("AccNo", chargesList[i].accountNumber)
                     obj.put("BankChargeCode", chargesList[i].chargeId)
+                    obj.put("Charge", chargesList[i].charges)
                     obj.put("Amount", chargesList[i].amount)
                     jsonArray.put(obj)
                 }
@@ -203,7 +204,7 @@ class SplitTransactionViewmodel(application: Application) : AndroidViewModel(app
         var groupData = RemittanceData()
         var chargesData = ChargesData()
         val jsonParams: MutableMap<String?, Any?> = HashMap()
-        jsonParams["Ln_Type"] = ""
+        jsonParams["Ln_Type"] = "SPLIT"
         jsonParams["Brcode"] =
             sharedPreferences.getString(com.finwin.doorstep.gramadhanasree.utils.Constants.BRANCH_ID, "")
         jsonParams["Tran_no"] = ""
